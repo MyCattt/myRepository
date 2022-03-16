@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: my-report-service
+server:
+  port: 10010
+  servlet:
+    context-path: /report
+    session:
+      timeout: 36000
+
+
+management:
+  endpoints:
+    enabled-by-default: true #默认开启所有监控端点信息
+    web:
+      exposure:
+        include: "*" #以web方式暴露所有端点

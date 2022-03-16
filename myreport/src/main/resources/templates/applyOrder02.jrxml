@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="applyOrder02" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f27577cc-3c4c-407d-891a-689ae9b1bce2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="busNo" class="java.lang.String"/>
+	<parameter name="count" class="java.lang.String"/>
+	<parameter name="communityName" class="java.lang.String"/>
+	<parameter name="jbglb" class="java.lang.String"/>
+	<parameter name="jbgy" class="java.lang.String"/>
+	<parameter name="ywrq" class="java.lang.String"/>
+	<parameter name="dataList" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="50" width="100" height="20" uuid="fbdd2c09-d83d-4ff8-8bb5-a4308742b8a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true"/>
+				</textElement>
+				<text><![CDATA[序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="50" width="100" height="20" uuid="78301744-ef32-4848-903c-3efa06fd8083"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true"/>
+				</textElement>
+				<text><![CDATA[楼幢地址]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="50" width="100" height="20" uuid="22f86205-b0a3-4e5e-9ebd-bea42a82c21e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true"/>
+				</textElement>
+				<text><![CDATA[规划用途]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="50" width="100" height="20" uuid="94ad5979-d8a7-4850-81bc-e6020dfb1196"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true"/>
+				</textElement>
+				<text><![CDATA[楼幢名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="50" width="100" height="20" uuid="d4e2ae25-dfbf-4b44-9a28-ecb764c720c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true"/>
+				</textElement>
+				<text><![CDATA[类型]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="15" width="100" height="20" uuid="9e53b9b5-f881-45da-afd7-1d3654d9b76f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[楼幢清单]]></text>
+			</staticText>
+			<line>
+				<reportElement x="29" y="39" width="500" height="1" uuid="7a1b5748-11a6-4b3f-adbc-d8bbb67f78b4"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="31" y="17" width="100" height="20" uuid="fdb69dd6-3108-4df7-b121-0adde235fb25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("XHB")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="131" y="17" width="100" height="20" uuid="d290f196-627d-4e1a-bfe3-2720592b0de7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("LZMCB")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="230" y="17" width="100" height="20" uuid="628d1382-52a6-4b0c-87aa-ca860f441c86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("LZDZ")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="330" y="17" width="100" height="20" uuid="6a85087d-b13a-4d0e-82b8-cc476e51df2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("LZLX")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="428" y="17" width="100" height="20" uuid="a5554aeb-946e-46b5-a0b4-81c85e96439c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("GHYT")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="228" y="80" width="50" height="20" uuid="87d01a19-7248-4129-8f88-18e82cd7e2f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[经办柜员：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="171" y="44" width="174" height="20" uuid="4ad9f27e-04c0-4ee1-97dd-f87005758587"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[本人已经核对以上信息确认无误。]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="428" y="58" width="80" height="1" uuid="652ba047-b7a6-428b-b7a1-6692c9d76d9d"/>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="378" y="80" width="50" height="20" uuid="f14e6691-1f90-455e-9d08-ea3ca698ed3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[业务日期：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="59" y="80" width="65" height="20" uuid="ed175b39-58d2-4872-b20a-40abc6d9bfca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[经办管理部：]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="124" y="80" width="104" height="20" uuid="620dc0bb-ecdc-4563-ad0a-b675d81b3579"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jbglb}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="345" y="44" width="100" height="20" uuid="aafed03d-9d6c-4be4-aa73-b2eb30c43f28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[申请人签字：]]></text>
+			</staticText>
+			<line>
+				<reportElement x="33" y="21" width="493" height="1" uuid="4f95a245-e877-4540-bd40-1c6449a956d5"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="278" y="80" width="100" height="20" uuid="793a2469-aaa6-40ba-bc16-e87c2815c874"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jbgy}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="428" y="80" width="111" height="20" uuid="e600fa8a-d081-4fe7-b56c-856722314c02"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="黑体-简" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ywrq}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

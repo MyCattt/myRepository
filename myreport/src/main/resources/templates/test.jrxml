@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="79c08e84-2b77-41fd-b1a8-3fcd311337fa">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="c120bb1c-5ffc-46f1-b0ec-9e95ec695eb5"/>
+	<parameter name="dataList" class="java.util.List"/>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="35" y="15" width="100" height="20" uuid="652ad0bc-6679-4d13-ac3b-63863a5d51eb"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[序号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="15" width="100" height="20" uuid="33b19b11-f605-4094-819e-cd9dee3a9e8b"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[单元号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="15" width="100" height="20" uuid="286f8864-aa55-4a3c-bb4f-06d0f176c383"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[楼幢名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="15" width="100" height="20" uuid="f3638d74-4ea9-41f5-b64f-c34becf8ae60"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[小区名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="15" width="100" height="20" uuid="94bdcda5-15f5-4291-9441-37b39b96f2d2"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[层号]]></text>
+			</staticText>
+			<line>
+				<reportElement x="19" y="7" width="526" height="1" uuid="a77a9d80-20bb-43dc-9d86-b2d10efcc4eb"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="19" y="8" width="1" height="46" uuid="d04b57a4-8e7b-4fe8-a5e5-1cccdc8096a4"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="544" y="7" width="1" height="46" uuid="566112c8-3444-47ac-9d9d-f8cf4994be57"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="85" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="235" y="21" width="100" height="20" uuid="106cc0b1-5958-4989-ade9-71ee1205606a"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("LZMC")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="335" y="21" width="100" height="20" uuid="5361e5f8-3687-4588-ab25-05c00b703535"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("DYH")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="435" y="21" width="100" height="20" uuid="7c856af1-dd67-48be-9b70-a6d7945f9bed"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("CH")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="135" y="21" width="100" height="20" uuid="a92ce88d-f467-4723-a277-8ef5cc75f2ae"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("XQMC")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="35" y="21" width="100" height="20" uuid="f0871503-14cc-40db-ab37-c1725ae12107"/>
+				<box topPadding="0" leftPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="黑体-简" pdfFontName="MHei-Medium" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((HashMap)$P{dataList}.get( $V{COLUMN_COUNT}-1 )).get("XH")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="19" y="0" width="1" height="85" uuid="bfa96dec-08f3-40e1-8301-09e53faa7edc"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="544" y="0" width="1" height="85" uuid="f690363d-f6d7-4fed-9e18-c9c058cfa6dc"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="20" y="28" width="525" height="1" uuid="4daa75e4-4720-47df-b1a6-1d6575c970aa"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="19" y="0" width="1" height="29" uuid="8e83c531-a14f-4c30-b18e-a7511cc4bfed"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="544" y="0" width="1" height="29" uuid="723aed61-1a82-4525-b0fb-fb61c955a4a7"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
